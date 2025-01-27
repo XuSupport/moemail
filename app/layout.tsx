@@ -2,6 +2,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { cn } from "@/lib/utils"
 import type { Metadata, Viewport } from "next"
+import Script from "next/script"
 import { zpix } from "./fonts"
 import "./globals.css"
 import { Providers } from "./providers"
@@ -78,6 +79,11 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="MoeMail" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
+        <Script
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7511413135173934"
+          crossOrigin="anonymous"
+        />
       </head>
       <body 
         className={cn(

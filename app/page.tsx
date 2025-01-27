@@ -3,7 +3,6 @@ import { auth } from "@/lib/auth"
 import { Shield, Mail, Clock } from "lucide-react"
 import { ActionButton } from "@/components/home/action-button"
 import { FeatureCard } from "@/components/home/feature-card"
-import Script from "next/script"
 
 export const runtime = "edge"
 
@@ -12,11 +11,7 @@ export default async function Home() {
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 h-screen">
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7511413135173934"
-        crossorigin="anonymous"
-      />
+
       <div className="container mx-auto h-full px-4 lg:px-8 max-w-[1600px]">
         <Header />
         <main className="h-full">
